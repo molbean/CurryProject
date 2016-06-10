@@ -12,7 +12,7 @@
             
  			for (var i = 0;i < json.length;i++){
                 res += '<tr><td>' + json[i].id +'</td>'+'<td>' + json[i].product +'</td>'+'<td>' 
-                + json[i].quantity +'</td>'+'<td>' + json[i].deliverytime +'</td></tr>';
+                + json[i].quantity +'</td>'+'<td>' + json[i].deliverytime +'</td>+<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
             }
             var obj = document.getElementById("datatable");
             obj.innerHTML = res;
@@ -23,6 +23,7 @@
 <body onload="getData(null);">
 	<body bgcolor="#ffd700">
 	<center>
+	<font face="メイリオ" color="#6a1917">
 <h1>注文内容確認</h1>
 	<table id="datatable" border="1">
 		<tr>
@@ -30,6 +31,7 @@
 		</tr>
 	</table>
 	<br>
+	</font>
 	</center>
 </body>
 </html>
