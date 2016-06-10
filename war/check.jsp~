@@ -1,12 +1,13 @@
 <%@page import="curry.Curry"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
 //リクエストスコープに保存されたインスタンス取得
     Curry curry = (Curry) session.getAttribute("curry"); 
 %>
-<%! String[] menu = new String[100]; %>
+<%! ArrayList<String> menu = new ArrayList<String>(); %>
 <% menu = curry.getProduct();%>
-<%! int[] quantity = new int[100];%>
+<%! ArrayList<Integer> quantity = new ArrayList<Integer>();%>
 <% quantity = curry.getQ();%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,9 +20,9 @@
         <font face="HG丸ｺﾞｼｯｸM-PRO" color ="cornsilk"> 
         <h1>注文確認</h1>
         <table>
-	<% for(int i=0;product[i] != " ";i++){%>
+	<% for(int i=0;i<menu.size();i++){%>
 	
-            <tr><td><%=menu[i]%></td><td>:<%=quantity[i]%>人前</td></tr>
+            <tr><td><%=menu.get(i)%></td><td>:<%=quantity.get(i)%>人前</td></tr>
 	    <%}%>
        
         <a href="/order">注文</a>

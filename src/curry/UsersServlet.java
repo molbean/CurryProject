@@ -26,10 +26,7 @@ public class UsersServlet extends HttpServlet {
           + "さん!  </font></p></h1>"+"<br>"
           +"<a href=\"/checkorder\">注文画面へ</a>"+"<br>"+
           "<a href=\"/showOrder.html\">お店の人はこちらへ</a>"+
-          
-          
-          
-          
+     
           "</body>"+"</center>");
     	
     	
