@@ -22,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
 		    response.setContentType("text/html");
 		    if (request.getUserPrincipal() != null) {
 		    response.getWriter().println("<center>"+"<body bgcolor=\"#ffd700\">"+"<h2><p><font face=\"メイリオ\" color=\"#6a1917\">"+"注文完了しました。"
-		    +"<br>"+"30分以内にあつあつのカレーをお届けします。"+"<br>"+"またのご利用をお待ちしています。"+"</h2>"+"<br>"
+		    +"<br>"+"指定された配達時間にあつあつのカレーをお届けします。"+"<br>"+"またのご利用をお待ちしています。"+"</h2>"+"<br>"
 		           + "<a href=\""
 		           + userService.createLogoutURL(thisUrl)
 		           + "\">ログアウト</a></p>"+"</body>"+"</center>");

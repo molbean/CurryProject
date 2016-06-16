@@ -3,7 +3,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 public class Curry implements Serializable{
 	
-	private int hour, minute;
+	private int hour, minute, sum;
 	private ArrayList<String> product;
 	private ArrayList<Integer> q;
 	
@@ -23,6 +23,9 @@ public class Curry implements Serializable{
 	public int getMinute(){
 		return minute;
 	}
+	public int getSum(){
+		return sum;
+	}
 	 public void setProduct(ArrayList<String> product) {
 	        this.product = product;
 	    }
@@ -35,8 +38,8 @@ public class Curry implements Serializable{
 	 public void setMinute(int minute) {
 	        this.minute = minute;
 	    }
+	 public void setSum(int sum){
+		 this.sum = sum;
+	 }
 	 
-
-
-
 }

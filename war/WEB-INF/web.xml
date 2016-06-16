@@ -42,6 +42,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/logout</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>ShopLogout</servlet-name>
+		<servlet-class>curry.ShopLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShopLogout</servlet-name>
+		<url-pattern>/shoplogout</url-pattern>
+	</servlet-mapping>
+	
+	
 	
 	<servlet>
 		<servlet-name>DelLinkDataServlet</servlet-name>

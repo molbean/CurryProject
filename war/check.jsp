@@ -28,6 +28,8 @@
 	    <%}%>
 	    </table>
 	    </h2>
+	    <h1>合計金額</h1>
+	    <h2><%=curry.getSum()%>円</h2>
 	  
        <h1>配達時間</h1>
        <p><h2><%=curry.getHour()%>:<%=curry.getMinute()%></h2></p><br>
