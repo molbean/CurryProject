@@ -7,6 +7,7 @@ import java.util.*;
 import javax.jdo.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
+import java.text.SimpleDateFormat;
 
 @SuppressWarnings({ "serial", "unused" })
 public class CheckOrderServlet extends HttpServlet {
@@ -26,7 +27,6 @@ public class CheckOrderServlet extends HttpServlet {
             HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-        
         Curry curry = new Curry();
         
     	int sum=0;
@@ -102,7 +102,11 @@ public class CheckOrderServlet extends HttpServlet {
 			System.out.println(product[i] + q.get(i) + hour+":"+minute);
 			pid.add(product[i]);
 			Date date = Calendar.getInstance().getTime();
-			OrderData data = new OrderData(product[i], q.get(i), hour + ":" + minute, date);
+			TimeZone tz=TimeZone.getTimeZone("Asia/Tokyo");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+			sdf.setTimeZone(tz);
+			String d = sdf.format(date);
+			OrderData data = new OrderData(product[i], q.get(i), hour + ":" + minute, d);
 			PersistenceManagerFactory factory = PMF.get();
 			PersistenceManager manager = factory.getPersistenceManager();
 

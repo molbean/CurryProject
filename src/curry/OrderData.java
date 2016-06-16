@@ -9,11 +9,11 @@ public class OrderData {
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Long id;
 	@Persistent
-	private String product, quantity, deliverytime;
-	@Persistent
-	private Date date;
+	private String product, quantity, deliverytime, date;
+	//@Persistent
+	//private Date date;
 
-	public OrderData(String product, String quantity, String deliverytime, Date date) {
+	public OrderData(String product, String quantity, String deliverytime, String date) {
         //this.userId = userId;
 		super();
         this.product = product;
@@ -45,10 +45,10 @@ public class OrderData {
     public void setDeliverytime(String deliverytime) {
  		this.deliverytime = deliverytime;
  	}
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
-    public void setDate(Date date) {
+    public void setDate(String date) {
     	this.date = date;
     }
 }
