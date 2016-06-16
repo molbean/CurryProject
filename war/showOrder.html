@@ -11,7 +11,7 @@
             var res = '';
             
  			for (var i = 0;i < json.length;i++){
-                res += '<tr><td>' + json[i].id +'</td>'+'<td>' + json[i].product +'</td>'+'<td>' 
+                res += '<tr><td>' + json[i].id +'</td>'+'<td>' + json[i].date +'</td>'+'<td>' + json[i].product +'</td>'+'<td>' 
                 + json[i].quantity +'</td>'+'<td>' + json[i].deliverytime +'</td>+<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
             }
             var obj = document.getElementById("datatable");
@@ -24,6 +24,7 @@
 	<body bgcolor="#ffd700">
 	<center>
 	<font face="メイリオ" color="#6a1917">
+	<a href="/shoplogout">確認完了！</a>
 <h1>注文内容確認</h1>
 	<table id="datatable" border="1">
 		<tr>
